@@ -11,7 +11,7 @@ int main(int argc, char **argv) {
         ASSERT(arr.size() == 5, "Fill in the correct value.");
         ASSERT(sizeof(arr) == sizeof(int[5]), "Fill in the correct value.");
         int ans[]{1, 2, 3, 4, 5};
-        ASSERT(std::memcmp(arr.data(), ans, sizeof(int[5])) == 0, "Fill in the correct values.");
+        ASSERT(std::memcmp(arr.data(), ans, sizeof(ans)) == 0, "Fill in the correct values.");
     }
     {
         std::array<double, 8> arr;

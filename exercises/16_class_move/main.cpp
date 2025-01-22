@@ -20,11 +20,11 @@ public:
         cached(2) {}
 
     // TODO: 实现移动构造器
-    DynFibonacci(DynFibonacci &&others) noexcept 
-        :cache(others.cache),
-        cached(others.cached){
-        others.cache=nullptr;
-        others.cache=0;
+    DynFibonacci(DynFibonacci &&others) noexcept {
+        if (this!=&others)
+        {
+            *this=std::move(others);
+        }
     };
 
     // TODO: 实现移动赋值
